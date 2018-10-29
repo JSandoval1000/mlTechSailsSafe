@@ -1,20 +1,32 @@
      $(document).ready(function(){
-      var i=1;
-     $("#add_row").click(function(){
-      $('#addr'+i).html(
-          "<td><img name='s1"+i+"' class=\"d-block w-100\" src=\"images/Apple1.jpg\" alt=\"First slide\"> </td>" +
-          "<td><img name='s2"+i+"' class=\"d-block w-100\" src=\"images/Apple1.jpg\" alt=\"First slide\"></td>" +
-          "<td><img name='s3"+i+"' class=\"d-block w-100\" src=\"images/Apple1.jpg\" alt=\"First slide\"></td>"
-      );
+     $("#dynamic_table").click(function(){
 
-      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-      i++;
+            localStorage['myKey'] = 0; // only strings
+            //creates x images on same row
+            function numCol(x,y){
+                var stringValue = '';
+                for(var j = 0; j < y;++j){//rows
+                    stringValue += "<tr>";
+                     for(var k = 0; k < x;++k) {//col
+                         stringValue += "<td><img name='c" + k + "' class=\"d-block w-100\" src=\"images/Apple1.jpg\" alt=\"First slide\"></td>";
+                       //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
+                     }
+                   stringValue += "</tr>";
+                }
+                return stringValue
+            }
+       // console.log(i);
+
+            $('#d_table').html(numCol(10,3));
+
+            $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
+
   });
-     $("#delete_row").click(function(){
-    	 if(i>1){
-		 $("#addr"+(i-1)).html('');
-		 i--;
-		 }
-	 });
+     $("#change_localvar").click(function(){
 
+              localStorage['myKey'] += 1;
+                console.log( localStorage['myKey']);
+
+	 });
 });
+
