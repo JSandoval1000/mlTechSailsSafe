@@ -8,7 +8,7 @@
                 for(var j = 0; j < y;++j){//rows
                     stringValue += "<tr>";
                      for(var k = 0; k < x;++k) {//col
-                         stringValue += "<td><img name='c" + k + "' class=\"d-block w-100\" src=\"images/Apple1.jpg\" alt=\"First slide\"></td>";
+                         stringValue += "<td><div class = \"col\"><input onclick=\"google()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded1 margin1 btn-primary\"/></\div></td>";
                        //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
                      }
                    stringValue += "</tr>";
@@ -17,7 +17,7 @@
             }
        // console.log(i);
 
-            $('#d_table').html(numCol(10,3));
+            $('#d_table').html(numCol(4,2));
 
             $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
 
@@ -30,3 +30,7 @@
 	 });
 });
 
+function google()
+{
+     location.href = "http://google.com";
+}

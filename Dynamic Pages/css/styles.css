@@ -120,3 +120,38 @@
     height: 34px;
 }
 
+.padding1{
+    padding-top: 0.3vmin;
+    padding-left: 0.3vmin;
+    padding-right: 0.3vmin;
+}
+
+.margin1{
+    margin-bottom: 1vmin;
+    margin-top: 1vmin;
+}
+
+.rounded1{
+   border-radius: 1vmax;
+}
+
+/*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
+.btn-primary {
+
+    outline: none !important;
+    box-shadow: none;
+     -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+     -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+     transform:scale(1.05);
+      outline: none !important;
+   box-shadow: none;
+}
