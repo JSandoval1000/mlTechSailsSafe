@@ -1,16 +1,36 @@
      $(document).ready(function(){
-      var i=1;
-     $("#add_row").click(function(){
-      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail"+i+"' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile"+i+"' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+     $("#dynamic_table").onload(function(){
 
-      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-      i++;
+            localStorage['myKey'] = 0; // only strings
+            //creates x images on same row
+            function numCol(x,y){
+                var stringValue = '';
+                for(var j = 0; j < y;++j){//rows
+                    stringValue += "<tr>";
+                     for(var k = 0; k < x;++k) {//col
+                         stringValue += "<td><div class = \"col\"><input onclick=\"google()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded1 margin1 btn-primary\"/></\div></td>";
+                       //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
+                     }
+                   stringValue += "</tr>";
+                }
+                return stringValue
+            }
+       // console.log(i);
+
+            $('#d_table').html(numCol(5,4));
+
+            $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
+
   });
-     $("#delete_row").click(function(){
-    	 if(i>1){
-		 $("#addr"+(i-1)).html('');
-		 i--;
-		 }
-	 });
+     $("#change_localvar").click(function(){
 
+              localStorage['myKey'] += 1;
+                console.log( localStorage['myKey']);
+
+	 });
 });
+
+function google()
+{
+     location.href = "http://google.com";
+}

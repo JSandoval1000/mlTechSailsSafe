@@ -76,9 +76,9 @@
 
 
 .marginTitle {
-    margin-right: 10px !important;
-    margin-left: 10px !important;
-     border-radius: 5px;
+    margin-right: 1vmax !important;
+    margin-left: 1vmax !important;
+    border-radius: 1vmax;
 }
 
 .marginSearchBar {
@@ -100,13 +100,13 @@
 }
 /* Font Size */
 .titleText {
-    font-size: 50px;
+    font-size: 3vmax;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 1vmax;
 }
 
 .titleSubText {
-    font-size: 20px;
+    font-size: 1vmax;
     text-align: center;
 }
 
@@ -155,3 +155,6 @@
       outline: none !important;
    box-shadow: none;
 }
+.container-fluid{
+    overflow-y:auto;
+}​

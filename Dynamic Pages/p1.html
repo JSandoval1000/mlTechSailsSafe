@@ -19,11 +19,11 @@
 <body>
 <div class="container-fluid h-100 pageBackground">
 
-<div class="container-fluid">
-    <div class="row h-25 text-center darkBlue marginTitle shadow">
+<div class="container-fluid ">
+    <div class="row h-auto text-center darkBlue marginTitle shadow">
         <div class="col-lg-4 col-sm-offset-4 container titleText">
                 <p>Tech Sails</p>
-             <div class="col container titleSubText">
+             <div class="col titleSubText">
                 <p>Sailing Through the Competiton</p>
 
         </div>
@@ -34,48 +34,20 @@
 
 
 
+<body onload="createTable()">
 
-<div class="container-fluid">
-    <div class="col m-auto">
-		<table class=" table-responsive h-60 rounded1 greyColor shadow" id="d_table">
-			<thead>
-					<tr >
-						<th class="text-center">
-							words
-						</th>
-						<th class="text-center">
-							Name
-						</th>
-						<th class="text-center">
-							Mail
-						</th>
-						<th class="text-center">
-							Mobile
-						</th>
-					</tr>
-				</thead>
-				<!--<tbody>
-				 	INITAL ROW CANT DELELTE
-					<tr id='addr0'>
-						   <tr id='addr1'></tr><td>
-						<input type="text" name='name0'  placeholder='Name' class="form-control"/>
-						</td>
-						<td>
-						<input type="text" name='mail0' placeholder='Mail' class="form-control"/>
-						</td>
-						<td>
-						<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>
-						</td>
-					</tr>
+<p id="demo"></p>
 
-				</tbody>-->
-			</table>
-	</div>
-    <!--Add/Delete button -->
-	<a id="dynamic_table" class="btn btn-default pull-left">Add Row</a><a id="change_localvar" class="btn btn-default pull-right">Change Val</a>
-<form action="http://google.com">
-    <input type="submit" value="Go to Google" />
-</form>
+<script src = "js/1.js/">
+function checkCookies() {
+    document.getElementById("demo").innerHTML = createTable();
+}
+</script>
+
+</body>
+
+    <!--Add/Delete button
+	<a id="dynamic_table" class="btn btn-default pull-left">Add Row</a><a id="change_localvar" class="btn btn-default pull-right">Change Val</a>-->
 </div>
 
 
