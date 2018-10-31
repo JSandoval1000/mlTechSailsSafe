@@ -1,36 +1,41 @@
-     $(document).ready(function(){
-     $("#dynamic_table").click(function(){
-
-            localStorage['myKey'] = 0; // only strings
-            //creates x images on same row
-            function numCol(x,y){
-                var stringValue = '';
-                for(var j = 0; j < y;++j){//rows
-                    stringValue += "<tr>";
-                     for(var k = 0; k < x;++k) {//col
-                         stringValue += "<td><div class = \"col\"><input onclick=\"google()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded1 margin1 btn-primary\"/></\div></td>";
-                       //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
+     function dtable() {
+             $("#dynamic_table").ready(function () {
+                    console.log(3);
+                 localStorage['myKey'] = 0; // only strings
+                 //creates x images on same row
+                 function numCol(x, y) {
+                     var stringValue = '';
+                     for (var j = 0; j < y; ++j) {//rows
+                         stringValue += "<tr>";
+                         for (var k = 0; k < x; ++k) {//col
+                             stringValue += "<td><div class = \"col\"><input  id ='name"+j+"' onclick=\"changeImage()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded1 margin1 btn-primary\"/></\div></td>";
+                             //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
+                         }
+                         stringValue += "</tr>";
                      }
-                   stringValue += "</tr>";
-                }
-                return stringValue
-            }
-       // console.log(i);
+                     return stringValue
+                 }
 
-            $('#d_table').html(numCol(4,2));
+                 // console.log(i);
 
-            $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
+                 $('#d_table').html(numCol(6, 4));
 
-  });
-     $("#change_localvar").click(function(){
+                 $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
 
-              localStorage['myKey'] += 1;
-                console.log( localStorage['myKey']);
-
-	 });
-});
-
+             });
+     }
+function setImage() {
+    $(document).ready(function () {
+        changeImage();
+        console.log("setImage");
+    });
+}
 function google()
 {
      location.href = "http://google.com";
+}
+
+function changeImage(){
+    var image = document.getAnimations('name0');
+    image.src = "images/Apple2";
 }
