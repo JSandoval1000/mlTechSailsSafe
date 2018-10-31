@@ -8,7 +8,12 @@
                      for (var j = 0; j < y; ++j) {//rows
                          stringValue += "<tr>";
                          for (var k = 0; k < x; ++k) {//col
-                             stringValue += "<td><div class = \"col\"><input  id ='name"+j+"' onclick=\"changeImage()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded1 margin1 btn-primary\"/></\div></td>";
+                             stringValue += "<td>" +
+                                 "<div class=\" row-fluid roundedT roundedB creamColor margin1 btn-primary shadow  blackText\">Text" +
+                                 "<input  id ='name"+j+k+"' onclick=\"changeImage()\"type=\"image\" src=\"images/Apple1.jpg\" class = \"img-fluid rounded imgW\"><\div>" +
+                                 "<div class=\"col-fluid text-center\">Info<br> Stuff <br> stuff</div>" +
+                                 "</div>" +
+                                 "</td>";
                              //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
                          }
                          stringValue += "</tr>";
@@ -18,7 +23,7 @@
 
                  // console.log(i);
 
-                 $('#d_table').html(numCol(6, 4));
+                 $('#d_table').html(numCol(4, 2));
 
                  $('#tab_logic').append('<tr id="d_table' + (1) + '"></tr>');
 
@@ -36,6 +41,6 @@ function google()
 }
 
 function changeImage(){
-    var image = document.getAnimations('name0');
-    image.src = "images/Apple2";
+    var image = document.getElementById('name01');
+    image.src = "images/Apple2.jpg";
 }

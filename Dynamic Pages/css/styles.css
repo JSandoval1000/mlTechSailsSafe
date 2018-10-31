@@ -1,6 +1,6 @@
 /* colors */
 .blueColor{
-    background: blue;
+    background: PALETURQUOISE;
 }
 .redColor{
     background: red;
@@ -8,6 +8,14 @@
 
 .greenColor{
     background: green;
+}
+
+.snowColor{
+    background: snow;
+}
+
+.lightcyanColor{
+    background: AZURE;
 }
 
 .pinkColor{
@@ -36,6 +44,10 @@
 }
 .pageBackground{
    background:rgba(0,91,124,.2);
+}
+
+.creamColor{
+   background: white;
 }
 
 /* Border curves */
@@ -76,9 +88,8 @@
 
 
 .marginTitle {
-    margin-right: 10px !important;
-    margin-left: 10px !important;
-     border-radius: 5px;
+    margin-right: 1vmin !important;
+    margin-left: 1vmin !important;
 }
 
 .marginSearchBar {
@@ -127,14 +138,18 @@
 }
 
 .margin1{
-    margin-bottom: 1vmin;
-    margin-top: 1vmin;
+    margin-bottom:  0.5vmin;
+    margin-top:  0.5vmin;
 }
 
-.rounded1{
-   border-radius: 1vmax;
+.roundedB{
+   border-bottom-right-radius: 0.5vmin;
+    border-bottom-left-radius: 0.5vmin;
 }
-
+.roundedT{
+   border-top-right-radius: 0.5vmin;
+    border-top-left-radius: 0.5vmin;
+}
 /*This is modifying the btn-primary colors but you could create your own .btn-something class as well*/
 .btn-primary {
 
@@ -145,13 +160,32 @@
     -ms-transition: all 1s ease; /* IE 9 */
     -o-transition: all 1s ease; /* Opera */
     transition: all 1s ease;
+     background-color: RGB(238, 238, 238);
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-     -webkit-transform:scale(1.1); /* Safari and Chrome */
-    -moz-transform:scale(1.1); /* Firefox */
-    -ms-transform:scale(1.1); /* IE 9 */
-    -o-transform:scale(1.1); /* Opera */
-     transform:scale(1.1);
+     -webkit-transform:scale(1.025); /* Safari and Chrome */
+    -moz-transform:scale(1.025); /* Firefox */
+    -ms-transform:scale(1.025); /* IE 9 */
+    -o-transform:scale(1.025); /* Opera */
+     transform:scale(1.025);
       outline: none !important;
-   box-shadow: none;
+    box-shadow: none;
+     background-color: white;
+    outline: none !important;
+}
+
+.imgW {
+   width: 100%;
+}
+
+div{
+    color: black;
+}
+.blackText{
+    color: black;
+    font-weight: bold;
+}
+
+.palFont{
+    font-family: Calibri;
 }
