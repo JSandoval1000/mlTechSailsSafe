@@ -16,7 +16,7 @@
                                  "</td>";
                              //stringValue += "<button type=\"image\" src=\"images/Apple1.jpg\" name=\"saveForm\" class=\"btn\" id=\"saveForm\" />";
                          }
-                         stringValue += "</tr>";
+                         stringValue += "</tr> ";
                      }
                      return stringValue
                  }
